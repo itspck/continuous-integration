@@ -10,6 +10,7 @@
     "dotenv": "^6.0.0",
     "ejs": "^2.6.1",
     "express": "^4.16.3",
+    "express-session": "^1.15.6",
     "materialize-css": "^1.0.0-rc.2",
     "morgan": "^1.9.0"
   },
@@ -28,5 +29,13 @@
   "jest": {
     "testEnvironment": "node",
     "verbose": true
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/itspck/continuous-integration.git"
+  },
+  "bugs": {
+    "url": "https://github.com/itspck/continuous-integration/issues"
+  },
+  "homepage": "https://github.com/itspck/continuous-integration#readme"
 }
