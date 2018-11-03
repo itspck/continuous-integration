@@ -23,6 +23,7 @@ app.use(express.static(__dirname + '/public'))
 // Controllers
 app.use("/", indexRouter);
 
+
 // Start app on port APP_PORT
 export const server = app.listen(process.env.APP_PORT || 3000, () =>
   console.log(`App listening on port ${process.env.APP_PORT}!`)
