@@ -100,3 +100,28 @@
   display: none;
 }
 
+#notify, #notify-error{
+  position: absolute;
+  width: 350px;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  opacity: .9;
+  display: none;
+  border-radius: 5px;
+  padding: 20px;
+  color: #fff;
+  background-color: #48B548;
+}
+
+#notify-icon, #notify-error-icon {
+  float: left; 
+  color: #fff;
+  font-size: 1.4em;
+  margin-right: 30px;
+}
+
+#notify-text, #notify-error-text{
+  display: block;
+}
