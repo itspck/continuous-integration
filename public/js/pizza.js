@@ -10,7 +10,16 @@ $(document).ready(function() {
         console.log(name, sauce, viande, fromage, accompagnement, file, piquante);
         $.post('/new_pizza',{name, sauce, viande, fromage, accompagnement, file, piquante},function(data, status){
             if(status==='success'){
+                /*$('#notify-icon').empty()
+                $('#notify-icon').append('check_circle_outline')
+                $('#notify-text').empty()
+                $('#notify-text').append('Pizza '+name+" créée")
+                console.log($('#notify-text').text())
+                $('#notify').css({"display": 'block',"background-color":"#48B548"})*/
+                $("#perso").load(window.location.href + " #perso" )
                 $('#modal1').modal('close');
+                
+                //window.setTimeout(function(){$('#notify').css("display","none")},3000)
             }
         }).error(function(res){
             console.log("error")

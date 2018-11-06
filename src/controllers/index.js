@@ -77,6 +77,7 @@ var pizza=[{
 
 fs.writeFileSync('./pizza.json',JSON.stringify(pizza))
 */
+
 app.use(express.json())
 const router = express.Router();
 
@@ -148,6 +149,7 @@ router.post('/login',(req, res)=>{
       res.status(401).send("Utilisateur inexistant")
     }else{
       if(req.body.password===obj[index].password){
+        req.session.user = obj[index]
         res.send("Connected")
       }else{
         res.status(401).send("Mot de passe invalide")
@@ -183,6 +185,14 @@ router.post('/new_pizza', (req, res)=>{
     res.status(409).send("Pizza déjà existante")
   }
 
+})
+
+router.get('/dashboard', (req, res)=>{
+  if(!req.session.user){
+    return res.status(401).send()
+  }else{
+    return res.status(200).send()
+  }
 })
 
 export default router;
