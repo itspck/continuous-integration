@@ -100,7 +100,7 @@
   display: none;
 }
 
-#notify, #notify-error{
+#notify, #notify-error,#notify-error-2{
   position: absolute;
   width: 350px;
   top: 20px;
@@ -115,13 +115,13 @@
   background-color: #48B548;
 }
 
-#notify-icon, #notify-error-icon {
+#notify-icon, #notify-error-icon, #notify-error-2-icon {
   float: left; 
   color: #fff;
   font-size: 1.4em;
   margin-right: 30px;
 }
 
-#notify-text, #notify-error-text{
+#notify-text, #notify-error-text, #notify-error-2-text{
   display: block;
 }

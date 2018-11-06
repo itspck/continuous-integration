@@ -7,13 +7,13 @@ const Joi = require('joi')
 
 /*
 var user=[]
-fs.writeFileSync("../storage/user.json",JSON.stringify(user))*/
+fs.writeFileSync("./user.json",JSON.stringify(user))*/
 
 //const userFile = require('./user.json')
 /*
 var pizza=[{
   "id":0,
-  "name":"Steak&Cheese",
+  "name":"Steak & Cheese",
   "url": "/static/images/FR_PDSC_fr_menu_2047.jpg",
   "composition": ["Sauce tomate", "mozzarella","boulettes de boeuf assaisonnées","tomates fraîches", "origan"],
   "type":"Incontournable"
@@ -154,6 +154,35 @@ router.post('/login',(req, res)=>{
       }
     }
   }
+})
+
+router.post('/new_pizza', (req, res)=>{
+  let data = fs.readFileSync('./pizza.json')
+  let obj = JSON.parse(data)
+  let exist = obj.find(function(e){
+    return e.name === req.body.name
+  })
+  if(!exist){
+    const newpizza = {
+      id: obj.length+1,
+      name: req.body.name,
+      url: req.body.file,
+      composition: [req.body.sauce, ...req.body.viande, ...req.body.fromage, ...req.body.accompagnement],
+      type: "Personnalisé" 
+    }
+    obj.push(newpizza)
+    console.log(obj)
+    fs.writeFile('./pizza.json',JSON.stringify(obj),(err, data) => {
+      if(err){
+        console.log("erreur")
+      }
+    })
+    res.send(newpizza)
+  }
+  else{
+    res.status(409).send("Pizza déjà existante")
+  }
+
 })
 
 export default router;
