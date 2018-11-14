@@ -12,7 +12,7 @@ describe("index route", () => {
       .expect("Content-Type", /html/)
       .expect(200)
       .then(response => {
-        expect(response.text).toMatch(/test/);
+        expect(response.text).toMatch(/Pizza/);
       });
   });
 });

@@ -1,0 +1,479 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/controllers/index.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../prettify.css" />
+    <link rel="stylesheet" href="../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../index.html">All files</a> / <a href="index.html">src/controllers</a> index.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">19.44% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>14/72</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">0% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>0/24</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">9.09% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>1/11</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">19.44% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>14/72</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line low'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">const express = require('express')
+const app = express()
+const fs = require('fs')
+const formidable = require('formidable')
+const Joi = require('joi')
+&nbsp;
+&nbsp;
+app.use(express.json())
+const router = express.Router();
+&nbsp;
+&nbsp;
+router.get("/", (req, res) =&gt; {
+  res.render("index");
+});
+&nbsp;
+router.get("/pizza", <span class="fstat-no" title="function not covered" >(r</span>eq, res) =&gt; {
+  let data = <span class="cstat-no" title="statement not covered" >fs.readFileSync('./src/storage/pizza.json')</span>
+  let pizza = <span class="cstat-no" title="statement not covered" >JSON.parse(data)</span>
+<span class="cstat-no" title="statement not covered" >  console.log(pizza)</span>
+<span class="cstat-no" title="statement not covered" >  res.render("pizza.ejs",{pizza: pizza});</span>
+});
+&nbsp;
+router.post("/create", <span class="fstat-no" title="function not covered" >(r</span>eq, res) =&gt; {
+<span class="cstat-no" title="statement not covered" >  if(!req.session.user){</span>
+    const schema = <span class="cstat-no" title="statement not covered" >{</span>
+      name: Joi.string().required(),
+      password: Joi.string().required(),
+      email: Joi.string().email().required()
+    }
+    const validation = <span class="cstat-no" title="statement not covered" >Joi.validate(req.body,schema)</span>
+<span class="cstat-no" title="statement not covered" >    if(validation.error){</span>
+<span class="cstat-no" title="statement not covered" >      res.status(400).send(validation.error)</span>
+<span class="cstat-no" title="statement not covered" >      return</span>
+    }else{
+      let data = <span class="cstat-no" title="statement not covered" >fs.readFileSync('./src/storage/user.json')</span>
+      let obj = <span class="cstat-no" title="statement not covered" >JSON.parse(data)</span>
+      let exist = <span class="cstat-no" title="statement not covered" >obj.find(<span class="fstat-no" title="function not covered" >fu</span>nction(e){</span>
+<span class="cstat-no" title="statement not covered" >        return e.name === req.body.name</span>
+      })
+<span class="cstat-no" title="statement not covered" >      if(!exist){</span>
+        const newuser = <span class="cstat-no" title="statement not covered" >{</span>
+          id: obj.length+1,
+          name: req.body.name,
+          password: req.body.password,
+          mail: req.body.email
+        }
+<span class="cstat-no" title="statement not covered" >        obj.push(newuser)</span>
+<span class="cstat-no" title="statement not covered" >        fs.writeFile('./src/storage/user.json', JSON.stringify(obj),<span class="fstat-no" title="function not covered" >(e</span>rr, data) =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >          if(err){</span>
+<span class="cstat-no" title="statement not covered" >            console.log(err)</span>
+          }
+        })
+<span class="cstat-no" title="statement not covered" >        res.send(newuser)</span>
+      }
+      else{
+<span class="cstat-no" title="statement not covered" >        res.status(409).send("Utilisateur déjà existant")</span>
+      }
+    }
+  }else{
+<span class="cstat-no" title="statement not covered" >    res.status(403).send("Vous êtes déjà connecté")</span>
+  }
+})
+&nbsp;
+router.post('/login',<span class="fstat-no" title="function not covered" >(r</span>eq, res)=&gt;{
+<span class="cstat-no" title="statement not covered" >  if(!req.session.user){</span>
+    const schema = <span class="cstat-no" title="statement not covered" >{</span>
+      name: Joi.string().required(),
+      password: Joi.string().required(),
+    }
+    const validation = <span class="cstat-no" title="statement not covered" >Joi.validate(req.body, schema)</span>
+<span class="cstat-no" title="statement not covered" >    if(validation.error){</span>
+<span class="cstat-no" title="statement not covered" >      res.status(400).send(validation.error)</span>
+<span class="cstat-no" title="statement not covered" >      return</span>
+    }else{
+      let data = <span class="cstat-no" title="statement not covered" >fs.readFileSync('./src/storage/user.json')</span>
+      let obj = <span class="cstat-no" title="statement not covered" >JSON.parse(data)</span>
+      let index = <span class="cstat-no" title="statement not covered" >obj.findIndex(<span class="fstat-no" title="function not covered" >fu</span>nction(e){</span>
+<span class="cstat-no" title="statement not covered" >        return e.name === req.body.name</span>
+      })
+<span class="cstat-no" title="statement not covered" >      if(index===-1){</span>
+<span class="cstat-no" title="statement not covered" >        res.status(401).send("Utilisateur inexistant")</span>
+      }else{
+<span class="cstat-no" title="statement not covered" >        if(req.body.password===obj[index].password){</span>
+<span class="cstat-no" title="statement not covered" >          req.session.user = obj[index]</span>
+<span class="cstat-no" title="statement not covered" >          res.send("Connected")</span>
+        }else{
+<span class="cstat-no" title="statement not covered" >          res.status(401).send("Mot de passe invalide")</span>
+        }
+      }
+    }
+  }else{
+<span class="cstat-no" title="statement not covered" >    res.status(403).send("Vous êtes déjà connecté")</span>
+  }
+})
+&nbsp;
+router.post('/new_pizza', <span class="fstat-no" title="function not covered" >(r</span>eq, res)=&gt;{
+  let data = <span class="cstat-no" title="statement not covered" >fs.readFileSync('./src/storage/pizza.json')</span>
+  let obj = <span class="cstat-no" title="statement not covered" >JSON.parse(data)</span>
+  let exist = <span class="cstat-no" title="statement not covered" >obj.find(<span class="fstat-no" title="function not covered" >fu</span>nction(e){</span>
+<span class="cstat-no" title="statement not covered" >    return e.name === req.body.name</span>
+  })
+<span class="cstat-no" title="statement not covered" >  if(!exist){</span>
+    const newpizza = <span class="cstat-no" title="statement not covered" >{</span>
+      id: obj.length+1,
+      name: req.body.name,
+      url: req.body.file,
+      composition: [req.body.sauce, ...req.body.viande, ...req.body.fromage, ...req.body.accompagnement],
+      type: "Personnalisé" 
+    }
+&nbsp;
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    if(req.body.piquante){</span>
+<span class="cstat-no" title="statement not covered" >      newpizza.composition.push("Sauce piquante")</span>
+    }
+<span class="cstat-no" title="statement not covered" >    obj.push(newpizza)</span>
+<span class="cstat-no" title="statement not covered" >    console.log(obj)</span>
+<span class="cstat-no" title="statement not covered" >    fs.writeFile('./src/storage/pizza.json',JSON.stringify(obj),<span class="fstat-no" title="function not covered" >(e</span>rr, data) =&gt; {</span>
+<span class="cstat-no" title="statement not covered" >      if(err){</span>
+<span class="cstat-no" title="statement not covered" >        console.log("erreur")</span>
+      }
+    })
+<span class="cstat-no" title="statement not covered" >    res.send(newpizza)</span>
+  }
+  else{
+<span class="cstat-no" title="statement not covered" >    res.status(409).send("Pizza déjà existante")</span>
+  }
+&nbsp;
+})
+&nbsp;
+router.get('/dashboard', <span class="fstat-no" title="function not covered" >(r</span>eq, res)=&gt;{
+<span class="cstat-no" title="statement not covered" >  if(!req.session.user){</span>
+<span class="cstat-no" title="statement not covered" >    return res.status(401).send()</span>
+  }else{
+<span class="cstat-no" title="statement not covered" >    return res.status(200).send()</span>
+  }
+})
+&nbsp;
+export default router;
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Wed Nov 14 2018 08:55:14 GMT+0100 (GMT+01:00)
+</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>
