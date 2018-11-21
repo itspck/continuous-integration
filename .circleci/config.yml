@@ -13,12 +13,15 @@ jobs: # a collection of steps
           name: update-npm
           command: 'sudo npm install -g npm@latest'
       - run:
-          name: test
-          command: 'npm run test'
+          name: install-npm
+          command: 'sudo npm install'
       - restore_cache: # special step to restore the dependency cache
           key: dependency-cache-{{ checksum "package.json" }}
       - save_cache: # special step to save the dependency cache
           key: dependency-cache-{{ checksum "package.json" }}
           paths:
             - ./node_modules
+      - run:
+          name: test
+          command: 'sudo npm run test'
       
