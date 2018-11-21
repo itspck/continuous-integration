@@ -23,19 +23,3 @@ describe("pizza route", () => {
       .expect(200)
   });
 });
-
-
-describe("Add pizza",()=>{
-  test("should respond with 200 with new pizza object",()=>{
-    var name = "TEST 1";
-    var sauce = ["Sauce tomate"];
-    var viande = ["Poulet"];
-    var fromage = ["Chevre"];
-    var accompagnement = "Sauce dallas";
-    var file = "";
-    var piquante = false;
-    return request(app).post("/new_pizza",{name, sauce, viande, fromage, accompagnement, file, piquante})
-      .expect(200)
-  })
-  
-})
