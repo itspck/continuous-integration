@@ -14,164 +14,215 @@
     <%- include('_layout/header')-%>
     <div class="container">
         <div class="section">
-            <h1 class="header red-text">Les bons plans du moment</h1>
-        <!--   Icon Section   -->
+            <h1 class="red-text flow-text">Les bons plans du moment</h1>
             <div class="row">
-                <div class="col s12 m3">
-                    <div class="card">
-                        <div class="card-image">
-                            <img src="/static/images/FR_PCHP_fr_menu_1846.jpg">
-                            <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
+                <% for(var i=0; i < pizza.length; i++) { %>
+                    <%if (pizza[i].type == "Bon plan") { %>
+                        <div class="col s12 m3">
+                            <div class="card">
+                                <div class="card-image">
+                                    <img src=<%= pizza[i].url %>>
+                                    <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
+                                </div>
+                                <div class="card-content">
+                                    <span class="card-title activator grey-text text-darken-4"><%= pizza[i].name %></span>
+                                </div>
+                                <div class="card-reveal">
+                                    <span class="card-title grey-text text-darken-4"><i class="material-icons right">close</i></span>
+                                    <ul class="receipe">
+                                        <% for(var j=0; j < pizza[i].composition.length; j++) { %>
+                                            <li><%= pizza[i].composition[j] %></li>
+                                        <% } %>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
-                        <div class="card-content">
-                            <span class="card-title activator grey-text text-darken-4">Pepperoni</span>
-                        </div>
-                        <div class="card-reveal">
-                            <span class="card-title grey-text text-darken-4"><i class="material-icons right">close</i></span>
-                            <p>Sauce tomate, mozzarella, saucisson pepperoni.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col s12 m3">
-                    <div class="card">
-                        <div class="card-image">
-                            <img src="/static/images/FR_PSME_fr_menu_1846.jpg">
-                            <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
-                        </div>
-                        <div class="card-content">
-                            <span class="card-title activator grey-text text-darken-4">Merguez</span>
-                        </div>
-                        <div class="card-reveal">
-                            <span class="card-title grey-text text-darken-4"><i class="material-icons right">close</i></span>
-                            <p>Sauce tomate, mozzarella, merguez.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col s12 m3">
-                    <div class="card">
-                        <div class="card-image">
-                            <img src="/static/images/FR_PMAR_fr_menu_1846.jpg">
-                            <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
-                        </div>
-                        <div class="card-content">
-                            <span class="card-title activator grey-text text-darken-4">Margherita</span>
-                        </div>
-                        <div class="card-reveal">
-                            <span class="card-title grey-text text-darken-4"><i class="material-icons right">close</i></span>
-                            <p>Sauce tomate, mozzarella.</p>
-                        </div>
-                    </div>
-                </div>
+                    <% } %>
+                <% } %>
             </div>
         </div>
         <div class="section">
-            <h1 class="red-text">Les nouveautés</h1>
-            <!--   Icon Section   -->
+            <h1 class="red-text flow-text">Les nouveautés</h1>
             <div class="row">
-                <div class="col s12 m3">
-                    <div class="card">
-                        <div class="card-image">
-                            <img src="/static/images/FR_PPBF_fr_menu_2762.jpg">
-                            <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
+                <% for(var i=0; i < pizza.length; i++) { %>
+                    <%if (pizza[i].type == "Nouveauté") { %>
+                        <div class="col s12 m3">
+                            <div class="card">
+                                <div class="card-image">
+                                    <img src=<%= pizza[i].url %>>
+                                    <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
+                                </div>
+                                <div class="card-content">
+                                    <span class="card-title activator grey-text text-darken-4"><%= pizza[i].name %></span>
+                                </div>
+                                <div class="card-reveal">
+                                    <span class="card-title grey-text text-darken-4"><i class="material-icons right">close</i></span>
+                                    <ul class="receipe">
+                                        <% for(var j=0; j < pizza[i].composition.length; j++) { %>
+                                            <li><%= pizza[i].composition[j] %></li>
+                                        <% } %>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
-                        <div class="card-content">
-                            <span class="card-title activator grey-text text-darken-4">Chick'n Bacon</span>
-                        </div>
-                        <div class="card-reveal">
-                            <span class="card-title grey-text text-darken-4"><i class="material-icons right">close</i></span>
-                            <p>Sauce barbecue, mozzarella, bacon, poulet rôti, oignons, tomates fraîches, oignons croustillants.</p>
-                        </div>
-                    </div>
-                </div>
+                    <% } %>
+                <% } %>
             </div>
         </div>
         <div class="section">
-            <h1 class="red-text">Les incontournables</h1>
-            <!--   Icon Section   -->
+            <h1 class="red-text flow-text">Les incontournables</h1>
             <div class="row">
-                <div class="col s12 m3">
-                    <div class="card">
-                        <div class="card-image">
-                            <img src="/static/images/FR_PPBF_fr_menu_2762.jpg">
-                            <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
+                <% for(var i=0; i < pizza.length; i++) { %>
+                    <%if (pizza[i].type == "Incontournable") { %>
+                        <div class="col s12 m3">
+                            <div class="card">
+                                <div class="card-image">
+                                    <img src=<%= pizza[i].url %>>
+                                    <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
+                                </div>
+                                <div class="card-content">
+                                    <span class="card-title activator grey-text text-darken-4"><%= pizza[i].name %></span>
+                                </div>
+                                <div class="card-reveal">
+                                    <span class="card-title grey-text text-darken-4"><i class="material-icons right">close</i></span>
+                                    <ul class="receipe">
+                                        <% for(var j=0; j < pizza[i].composition.length; j++) { %>
+                                            <li><%= pizza[i].composition[j] %></li>
+                                        <% } %>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
-                        <div class="card-content">
-                            <span class="card-title activator grey-text text-darken-4">Pepper Beef</span>
-                        </div>
-                        <div class="card-reveal">
-                            <span class="card-title grey-text text-darken-4"><i class="material-icons right">close</i></span>
-                            <p>Sauce tomate, mozzarella, pommes de terre sautées, boulettes de boeuf assaisonnées, oignons, assaisonnement au poivre.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col s12 m3">
-                    <div class="card">
-                        <div class="card-image">
-                            <img src="/static/images/FR_PDSC_fr_menu_2047.jpg">
-                            <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
-                        </div>
-                        <div class="card-content">
-                            <span class="card-title activator grey-text text-darken-4">Steak&Cheese</span>
-                        </div>
-                        <div class="card-reveal">
-                            <span class="card-title grey-text text-darken-4"><i class="material-icons right">close</i></span>
-                            <p>Sauce tomate, mozzarella, boulettes de boeuf assaisonnées, tomates fraîches, origan.</p>
-                        </div>
-                    </div>
-                </div>
+                    <% } %>
+                <% } %>
             </div>
-            
         </div>
         <div class="section">
-            <h1 class="red-text">Faites vous plaisir</h1>
-        <!--   Icon Section   -->
+            <h1 class="red-text flow-text">Faites vous plaisir</h1>
             <div class="row">
-                <div class="col s12 m3">
-                    <div class="card">
-                        <div class="card-image">
-                            <img src="/static/images/FR_PSDB_fr_menu_1836.jpg">
-                            <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
+                <% for(var i=0; i < pizza.length; i++) { %>
+                    <%if (pizza[i].type == "Classique") { %>
+                        <div class="col s12 m3">
+                            <div class="card">
+                                <div class="card-image">
+                                    <img src=<%= pizza[i].url %>>
+                                    <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
+                                </div>
+                                <div class="card-content">
+                                    <span class="card-title activator grey-text text-darken-4"><%= pizza[i].name %></span>
+                                </div>
+                                <div class="card-reveal">
+                                    <span class="card-title grey-text text-darken-4"><i class="material-icons right">close</i></span>
+                                    <ul class="receipe">
+                                        <% for(var j=0; j < pizza[i].composition.length; j++) { %>
+                                            <li><%= pizza[i].composition[j] %></li>
+                                        <% } %>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
-                        <div class="card-content">
-                            <span class="card-title activator grey-text text-darken-4">Spicy Dallas</span>
+                    <% } %>
+                <% } %>
+            </div>
+        </div>
+        <div class="section">
+            <h1 class="red-text flow-text">Créez la pizza de vos rêves !</h1>
+            <div id="perso" class="row">
+                <% for(var i=0; i < pizza.length; i++) { %>
+                    <%if (pizza[i].type == "Personnalisé") { %>
+                        <div class="col s12 m3">
+                            <div class="card">
+                                <div class="card-image">
+                                    <img src=<%= pizza[i].url %>>
+                                    <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
+                                </div>
+                                <div class="card-content">
+                                    <span class="card-title activator grey-text text-darken-4"><%= pizza[i].name %></span>
+                                </div>
+                                <div class="card-reveal">
+                                    <span class="card-title grey-text text-darken-4"><i class="material-icons right">close</i></span>
+                                    <ul class="receipe">
+                                        <% for(var j=0; j < pizza[i].composition.length; j++) { %>
+                                            <li><%= pizza[i].composition[j] %></li>
+                                        <% } %>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
-                        <div class="card-reveal">
-                            <span class="card-title grey-text text-darken-4"><i class="material-icons right">close</i></span>
-                            <p>Sauce barbecue, mozzarella, saucisson pepperoni, oignons, boulettes de boeuf assaisonnées, poulet rôti, bacon, relevée avec une sauce Dallas, à la fois douce et piquante.</p>
-                        </div>
-                    </div>
+                    <% } %>
+                <% } %>
+                <!-- Modal Structure -->
+            </div>
+            <button data-target="modal1" class="btn modal-trigger">Composez votre pizza !</button>
+            <div id="modal1" class="modal modal-fixed-footer">
+                <div id="notify-error-2">
+                    <i id="notify-error-2-icon" class="icon material-icons"></i>
+                    <div id="notify-error-2-text">
                 </div>
-
-                <div class="col s12 m3">
-                    <div class="card">
-                        <div class="card-image">
-                            <img src="/static/images/FR_PCAN_fr_menu_2047.jpg">
-                            <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
-                        </div>
-                        <div class="card-content">
-                            <span class="card-title activator grey-text text-darken-4">Cannibale</span>
-                        </div>
-                        <div class="card-reveal">
-                            <span class="card-title grey-text text-darken-4"><i class="material-icons right">close</i></span>
-                            <p>Sauce barbecue, mozzarella, poulet rôti, merguez, boulettes de boeuf assaisonnées.</p>
-                        </div>
-                    </div>
                 </div>
-
-                <div class="col s12 m3">
-                    <div class="card">
-                        <div class="card-image">
-                            <img src="/static/images/FR_P4FR_fr_menu_2142.jpg">
-                            <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
+                <div class="modal-content">
+                    <h4>Création de la pizza</h4>
+                    <form>
+                        <div class="input-field col s6">
+                            <input placeholder="Nom de la pizza" id="pizza_name" type="text" class="validate">
+                            <label for="pizza_name">nom de la pizza</label>
                         </div>
-                        <div class="card-content">
-                            <span class="card-title activator grey-text text-darken-4">4 Fromages</span>
+                        <div class="input-field col s12">
+                            <select id="sauce">
+                                <option value="Sauce tomate">Sauce tomate</option>
+                                <option value="Sauce barbecue">Sauce barbecue</option>
+                                <option value="Crème fraiche">Crème fraiche</option>
+                            </select>
+                            <label>Type de sauce</label>
                         </div>
-                        <div class="card-reveal">
-                            <span class="card-title grey-text text-darken-4"><i class="material-icons right">close</i></span>
-                            <p>Sauce tomate (ou crème fraîche légère), mozzarella, chèvre, Emmental, Fourme d’Ambert A.O.P.</p>
+                        <div class="input-field col s12">
+                            <select id="viande" multiple>
+                                <option value="Merguez">Merguez</option>
+                                <option value="Poulet roti">Poulet roti</option>
+                                <option value="Boulette">Boulettes de boeuf</option>
+                                <option value="Bacon">Bacon</option>
+                                <option value="Pepperoni">Pepperoni</option>
+                            </select>
+                            <label>Viande</label>
                         </div>
-                    </div>
+                        <div class="input-field col s12">
+                            <select id="fromage" multiple>
+                                <option value="Mozzarella">Mozzarella</option>
+                                <option value="Chèvre">Chèvre</option>
+                                <option value="Emmental">Emmental</option>
+                                <option value="Fourme d'Ambert">Fourme d'Ambert</option>
+                            </select>
+                            <label>Fromage</label>
+                        </div>
+                        <div class="input-field col s12">
+                            <select id="accompagnement" multiple>
+                                <option value="Oignons">Oignons</option>
+                                <option value="Oignons croustillants">Oignons croustillants</option>
+                                <option value="Sauce dallas">Sauce dallas</option>
+                            </select>
+                            <label>Accompagnement</label>
+                        </div>
+                        <div class="col s12">
+                            <label>
+                                <input id="piquante" type="checkbox"/>
+                                <span>Sauce piquante</span>
+                            </label>
+                        </div>
+                        <div class="file-field input-field col s12">
+                            <div class="btn">
+                                <span>Browse</span>
+                                <input type="file" accept="image/jpeg, image/jpg, image/png">
+                            </div>
+                            <div class="file-path-wrapper">
+                                <input id="file" class="file-path validate" type="text" placeholder="Sélectionnez votre fichier image">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    
+                    <button id="submitPizza" class="btn waves-effect waves-light" type="submit" name="action">Créer la pizza</button>
+                    <a href="#!" class="modal-close btn-flat">Annuler</a>
                 </div>
             </div>
         </div>
