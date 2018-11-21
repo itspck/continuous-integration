@@ -1,0 +1,47 @@
+{
+  "name": "zz2-f5-ci-bootstrap",
+  "version": "1.0.0",
+  "description": "A bootstrap for nodeJS project",
+  "main": "src/index.js",
+  "author": "Julien Usson",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "dotenv": "^6.0.0",
+    "ejs": "^2.6.1",
+    "express": "^4.16.3",
+    "express-session": "^1.15.6",
+    "joi": "^14.0.6",
+    "jquery": "^3.3.1",
+    "materialize-css": "^1.0.0-rc.2",
+    "morgan": "^1.9.1"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0",
+    "babel-watch": "^2.0.7",
+    "jest": "^23.6.0",
+    "supertest": "^3.3.0"
+  },
+  "scripts": {
+    "start": "babel-watch src/index.js -w src/views",
+    "test": "npm run jest",
+    "jest": "jest --coverage",
+    "isima-install": "rm -f package-lock.json && npm install --no-bin-links",
+    "isima-start": "./node_modules/babel-watch/babel-watch.js src/index.js -w src/views -w src/storage",
+    "isima-test": "npm run isima-jest",
+    "isima-jest": "./node_modules/jest/bin/jest.js --coverage"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "verbose": true
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/itspck/continuous-integration.git"
+  },
+  "bugs": {
+    "url": "https://github.com/itspck/continuous-integration/issues"
+  },
+  "homepage": "https://github.com/itspck/continuous-integration#readme"
+}
