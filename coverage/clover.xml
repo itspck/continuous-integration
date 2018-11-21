@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1542185210579" clover="3.2.0">
-  <project timestamp="1542185210580" name="All files">
-    <metrics statements="83" coveredstatements="37" conditionals="24" coveredconditionals="2" methods="13" coveredmethods="5" elements="120" coveredelements="44" complexity="0" loc="83" ncloc="83" packages="2" files="2" classes="2">
+<coverage generated="1542786523513" clover="3.2.0">
+  <project timestamp="1542786523514" name="All files">
+    <metrics statements="84" coveredstatements="38" conditionals="24" coveredconditionals="2" methods="14" coveredmethods="6" elements="122" coveredelements="46" complexity="0" loc="84" ncloc="84" packages="3" files="3" classes="3">
       <package name="src">
         <metrics statements="13" coveredstatements="13" conditionals="2" coveredconditionals="1" methods="1" coveredmethods="1"/>
         <file name="index.js" path="/home/itspck/Integration/continuous integration/src/index.js">
@@ -80,7 +80,7 @@
           <line num="134" count="1" type="stmt"/>
           <line num="135" count="1" type="stmt"/>
           <line num="136" count="1" type="stmt"/>
-          <line num="137" count="14" type="stmt"/>
+          <line num="137" count="16" type="stmt"/>
           <line num="139" count="1" type="cond" truecount="1" falsecount="1"/>
           <line num="140" count="1" type="stmt"/>
           <line num="141" count="1" type="stmt"/>
@@ -95,6 +95,13 @@
           <line num="165" count="0" type="cond" truecount="0" falsecount="2"/>
           <line num="166" count="0" type="stmt"/>
           <line num="168" count="0" type="stmt"/>
+        </file>
+      </package>
+      <package name="src.utils">
+        <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+        <file name="add.js" path="/home/itspck/Integration/continuous integration/src/utils/add.js">
+          <metrics statements="1" coveredstatements="1" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
+          <line num="1" count="1" type="stmt"/>
         </file>
       </package>
     </metrics>
