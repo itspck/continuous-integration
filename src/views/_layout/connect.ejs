@@ -1,18 +1,32 @@
 
-  <div class="row">
-    <form class="col s12">
-      <div class="row">
-        <div class="input-field col s6">
-          <i class="material-icons prefix">account_circle</i>
-          <input id="icon_prefix" type="text" class="validate">
-          <label for="icon_prefix">First Name</label>
+<!--Login Form -->
+
+<div id="logindiv">
+    <div id="notify-error">
+        <i id="notify-error-icon" class="icon material-icons"></i>
+        <div id="notify-error-text">
         </div>
-        <div class="input-field col s6">
-          <i class="material-icons prefix">phone</i>
-          <input id="icon_telephone" type="tel" class="validate">
-          <label for="icon_telephone">Telephone</label>
+    </div>
+    <div class="login-page">
+        <div class="form">
+            <form class="register-form">
+                <input id="login" type="text" placeholder="username" required/>
+                <input id="passwd" type="password" placeholder="password" required/>
+                <input id="mail" type="text" placeholder="email address" required/>
+                <button id="create">Create</button>
+                <input type="button" class="cancel" value="Cancel"/>
+                <p class="message">Already registered? <a href="#">Sign In</a></p>
+            </form>
+            <form class="login-form">
+                <input id="username" type="text" placeholder="username" required/>
+                <input id="password" type="password" placeholder="password" required/>
+                <button id="send">Send</button>
+                <input type="button" class="cancel" value="Cancel"/>
+                <p class="message">Not registered? <a href="#">Create an account</a></p>
+          </form>
         </div>
-      </div>
-    </form>
-  </div>
+    </div>
+</div>
+        
+
         
