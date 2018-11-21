@@ -16,7 +16,6 @@ router.get("/", (req, res) => {
 router.get("/pizza", (req, res) => {
   let data = fs.readFileSync('./src/storage/pizza.json')
   let pizza = JSON.parse(data)
-  console.log(pizza)
   res.render("pizza.ejs",{pizza: pizza});
 });
 
@@ -127,6 +126,10 @@ router.post('/new_pizza', (req, res)=>{
 
 })*/
 
+function addPizza(path,req,res){
+  
+}
+
 router.post('/new_pizza', (req, res)=>{
   let data = fs.readFileSync('./src/storage/pizza.json')
   let obj = JSON.parse(data)
@@ -134,6 +137,7 @@ router.post('/new_pizza', (req, res)=>{
     return e.name === req.body.name
   })
   if(!exist){
+    console.log(req.body.name)
     const newpizza = {
       id: obj.length+1,
       name: req.body.name,
@@ -141,11 +145,12 @@ router.post('/new_pizza', (req, res)=>{
       composition: [req.body.sauce, ...req.body.viande, ...req.body.fromage, ...req.body.accompagnement],
       type: "Personnalisé" 
     }
+    
     obj.push(newpizza)
     console.log(obj)
     fs.writeFile('./src/storage/pizza.json',JSON.stringify(obj),(err, data) => {
       if(err){
-        console.log("erreur")
+        console.log(err)
       }
     })
     res.send(newpizza)

@@ -6,7 +6,6 @@ $(document).ready(function() {
         var fromage = $("#fromage").val();
         var accompagnement = $("#accompagnement").val();
         var file = $("#file").val();
-        console.log($("#file"))
         var piquante = $("#piquante").is(':checked');
         console.log(name, sauce, viande, fromage, accompagnement, file, piquante);
         $.post('/new_pizza',{name, sauce, viande, fromage, accompagnement, file, piquante},function(data, status){
