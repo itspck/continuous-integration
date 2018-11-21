@@ -4,7 +4,7 @@ jobs: # a collection of steps
     branches:
       only:
         - master
-        - /feature/*/
+        #- /feature/*/
     docker: # run the steps with Docker
       - image: circleci/node:4.8.2 # this is where all `steps` will run
     steps: # a collection of executable commands
